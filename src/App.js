@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import './App.css';
 
+
 function App() {
+
+  const { onToggleButton, tg } = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -9,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      Hello
+      <button onClick={onToggleButton} >Toggle</button>
     </div>
   );
 }
